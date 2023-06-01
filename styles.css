@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* fonts */
+    --poppins: 'Poppins', sans-serif;
+    --open-sans: 'Open Sans', sans-serif;
+
+    /* colors */
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+}
+
+body {
+    background-image: url(images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--violet);
+}
+header img {
+    width: 120px;
+    margin: 1.825rem;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.display-image img {
+    width: 300px;
+    margin: 30px 0;
+}
+h1 {
+    font-family: var(--poppins);
+    padding: 10px 40px;
+    color: white;
+    font-weight: 600;
+}
+p {
+    font-family: var(--open-sans);
+    padding: 10px 35px;
+    color: white;
+    font-size: 1rem;
+}
+button {
+    width: 200px;
+    height: 40px;
+    border-radius: 2rem;
+    border: none;
+    margin: 20px 0;
+    box-shadow: 1px 3px 3px 1px hsl(256, 38%, 34%);
+    font-family: var(--poppins);
+    color: var(--violet);
+}
+button:hover {
+    background-color: var(--soft-magenta);
+    color: white;
+    cursor: pointer;
+}
+.socials {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px 120px;
+}
+.socials .facebook {
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.socials .facebook:hover {
+    filter: invert(26%) sepia(63%) saturate(6806%) hue-rotate(290deg) brightness(121%) contrast(91%);
+    cursor: pointer;
+}
+.socials .twitter {
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.socials .twitter:hover {
+    filter: invert(26%) sepia(63%) saturate(6806%) hue-rotate(290deg) brightness(121%) contrast(91%);
+    cursor: pointer;
+}
+.socials .instagram {
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.socials .instagram:hover {
+    filter: invert(26%) sepia(63%) saturate(6806%) hue-rotate(290deg) brightness(121%) contrast(91%);
+    cursor: pointer;
+}
+
+
+
+
+
+@media (min-width: 500px) {
+    body {
+        margin-left: 50px;
+        background-image: url(images/bg-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }   
+    header {
+        margin: 10px;
+    }
+    header img {
+        width: 200px;
+    }
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .display-image img {
+        width: 100%;
+    }
+    .desc {
+        margin-top: 70px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        position: relative;
+    }
+    h1 {
+        font-size: 2rem;
+        width: 500px;
+    }
+    p {
+        font-size: 1.325rem;
+        width: 680px;
+    }
+    button {
+        position: relative;
+        right: 125% ;
+    }
+    footer {
+        margin-top: -50px;
+    }
+    .socials {
+        display: flex;
+        justify-content: flex-end;
+        gap: 1rem;
+    }
+}
